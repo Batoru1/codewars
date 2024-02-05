@@ -1,3 +1,5 @@
+'use strict';
+
 //1 ou probably know the "like" system from Facebook and other pages. People can "like" blog posts, pictures or other items. We want to create the text that should be displayed next to such an item.
 
 // Implement the function which takes an array containing the names of people that like an item. It must return the display text as shown in the examples:
@@ -8,26 +10,26 @@
 // ["Max", "John", "Mark"]           -->  "Max, John and Mark like this"
 // ["Alex", "Jacob", "Mark", "Max"]  -->  "Alex, Jacob and 2 others like this"
 
-function likes(names) {
-  if (names.length === 0) {
-    return 'no one likes this';
-  } else if (names.length === 1) {
-    return `${names[0]} likes this`;
-  } else if (names.length === 2) {
-    return `${names[0]} and ${names[1]} like this`;
-  } else if (names.length === 3) {
-    return `${names[0]}, ${names[1]} and ${names[2]} like this`;
-  } else {
-    return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`;
-  }
-}
+// function likes(names) {
+//   if (names.length === 0) {
+//     return 'no one likes this';
+//   } else if (names.length === 1) {
+//     return `${names[0]} likes this`;
+//   } else if (names.length === 2) {
+//     return `${names[0]} and ${names[1]} like this`;
+//   } else if (names.length === 3) {
+//     return `${names[0]}, ${names[1]} and ${names[2]} like this`;
+//   } else {
+//     return `${names[0]}, ${names[1]} and ${names.length - 2} others like this`;
+//   }
+// }
 
-console.log(likes([]));
-console.log(likes(['Peter']));
-console.log(likes(['Jacob', 'Alex']));
-console.log(likes(['Max', 'John', 'Mark']));
-console.log(likes(['Alex', 'Jacob', 'Mark', 'Max']));
-console.log(likes(['Alex', 'Jacob', 'Mark', 'Max', 'hjkhjk']));
+// console.log(likes([]));
+// console.log(likes(['Peter']));
+// console.log(likes(['Jacob', 'Alex']));
+// console.log(likes(['Max', 'John', 'Mark']));
+// console.log(likes(['Alex', 'Jacob', 'Mark', 'Max']));
+// console.log(likes(['Alex', 'Jacob', 'Mark', 'Max', 'hjkhjk']));
 
 //2 Usually when you buy something, you're asked whether your credit card number, phone number or answer to your most secret question is still correct. However, since someone could look over your shoulder, you don't want that shown on your screen. Instead, we mask it.
 
@@ -42,3 +44,35 @@ console.log(likes(['Alex', 'Jacob', 'Mark', 'Max', 'hjkhjk']));
 // // "What was the name of your first pet?"
 // "Skippy" --> "##ippy"
 // "Nananananananananananananananana Batman!" --> "###################################
+
+// const Test = require('@codewars/test-compat');
+
+// describe('maskify', function () {
+//   it('should work for some examples', function () {
+//     Test.assertEquals(maskify('4556364607935616'), '############5616');
+//     Test.assertEquals(maskify('1'), '1');
+//     Test.assertEquals(maskify('11111'), '#1111');
+//   });
+// });
+
+function maskify(cc) {
+  const ccString = cc.toString();
+
+  if (ccString.length > 4) {
+    const maskedString = '#'.repeat(ccString.length - 4) + ccString.slice(-4);
+    return maskedString;
+  } else {
+    return cc;
+  }
+}
+
+console.log(maskify());
+
+//3 Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case). The next words should be always capitalized.
+
+// Examples
+// "the-stealth-warrior" gets converted to "theStealthWarrior"
+
+// "The_Stealth_Warrior" gets converted to "TheStealthWarrior"
+
+// "The_Stealth-Warrior" gets converted to "TheStealthWarrior"
