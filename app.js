@@ -55,18 +55,18 @@
 //   });
 // });
 
-function maskify(cc) {
-  const ccString = cc.toString();
+// function maskify(cc) {
+//   const ccString = cc.toString();
 
-  if (ccString.length > 4) {
-    const maskedString = '#'.repeat(ccString.length - 4) + ccString.slice(-4);
-    return maskedString;
-  } else {
-    return cc;
-  }
-}
+//   if (ccString.length > 4) {
+//     const maskedString = '#'.repeat(ccString.length - 4) + ccString.slice(-4);
+//     return maskedString;
+//   } else {
+//     return cc;
+//   }
+// }
 
-console.log(maskify());
+// console.log(maskify());
 
 //3 Complete the method/function so that it converts dash/underscore delimited words into camel casing. The first word within the output should be capitalized only if the original word was capitalized (known as Upper Camel Case, also often referred to as Pascal case). The next words should be always capitalized.
 
@@ -76,3 +76,28 @@ console.log(maskify());
 // "The_Stealth_Warrior" gets converted to "TheStealthWarrior"
 
 // "The_Stealth-Warrior" gets converted to "TheStealthWarrior"
+
+function toCamelCase(str) {
+  const regex = /^[a-zA-Z]+([-_][a-zA-Z]+)+$/;
+
+  if (regex.test(str)) {
+    // Convert to camelCase
+    return str.replace(/[-_][a-zA-Z]/g, function (match) {
+      return match.charAt(1).toUpperCase();
+    });
+  } else {
+    return '';
+  }
+}
+console.log(toCamelCase('fsf-Lsdfsf-fdsdfsa-gfds'));
+
+//4 Your task is to sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result.
+
+// Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
+
+// If the input string is empty, return an empty string. The words in the input String will only contain valid consecutive numbers.
+
+// Examples
+// "is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
+// "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
+// ""  -->  ""
