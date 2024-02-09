@@ -77,19 +77,19 @@
 
 // "The_Stealth-Warrior" gets converted to "TheStealthWarrior"
 
-function toCamelCase(str) {
-  const regex = /^[a-zA-Z]+([-_][a-zA-Z]+)+$/;
+// function toCamelCase(str) {
+//   const regex = /^[a-zA-Z]+([-_][a-zA-Z]+)+$/;
 
-  if (regex.test(str)) {
-    // Convert to camelCase
-    return str.replace(/[-_][a-zA-Z]/g, function (match) {
-      return match.charAt(1).toUpperCase();
-    });
-  } else {
-    return '';
-  }
-}
-console.log(toCamelCase('fsf-Lsdfsf-fdsdfsa-gfds'));
+//   if (regex.test(str)) {
+//     // Convert to camelCase
+//     return str.replace(/[-_][a-zA-Z]/g, function (match) {
+//       return match.charAt(1).toUpperCase();
+//     });
+//   } else {
+//     return '';
+//   }
+// }
+// console.log(toCamelCase('fsf-Lsdfsf-fdsdfsa-gfds'));
 
 //4 Your task is to sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result.
 
@@ -101,3 +101,27 @@ console.log(toCamelCase('fsf-Lsdfsf-fdsdfsa-gfds'));
 // "is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
 // "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
 // ""  -->  ""
+
+// const string1 = 'is2 Thi1s T4est 3a';
+// const string2 = '4of Fo1r pe6ople g3ood th5e the2';
+
+// function myArray(string) {
+//   // return string.split(' ');
+//   const arr = string.split(' ');
+//   for (let i = 0; i < arr.length; i++) {}
+// }
+
+// console.log(myArray(string1));
+//no finito//
+
+//5 Digital root is the recursive sum of all the digits in a number.
+
+// Given n, take the sum of the digits of n. If that value has more than one digit, continue reducing in this way until a single-digit number is produced. The input will be a non-negative integer.
+
+// Examples
+//     16  -->  1 + 6 = 7
+//    942  -->  9 + 4 + 2 = 15  -->  1 + 5 = 6
+// 132189  -->  1 + 3 + 2 + 1 + 8 + 9 = 24  -->  2 + 4 = 6
+// 493193  -->  4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11  -->  1 + 1 = 2
+
+function digitalRoot(n) {}
