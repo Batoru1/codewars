@@ -124,4 +124,28 @@
 // 132189  -->  1 + 3 + 2 + 1 + 8 + 9 = 24  -->  2 + 4 = 6
 // 493193  -->  4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11  -->  1 + 1 = 2
 
-function digitalRoot(n) {}
+function digitalRoot(n) {
+  if (n > 9) {
+    const seperateNumbers = n
+      .toString()
+      .split('')
+      .map(n => parseInt(n));
+    return seperateNumbers;
+    function sumOfArr(seperateNumbers) {
+      let sum = 0;
+      for (let i = 0; i < seperateNumbers.length; i++) {
+        sum += parseInt(seperateNumbers[i]);
+        return sumOfArr;
+        console.log(sumOfArr);
+      }
+    }
+  } else {
+    return n;
+  }
+}
+console.log(digitalRoot(12));
+
+//The toString() method converts the number to a string.
+// The split('') method splits the string into an array of individual characters.
+// The map() method is used to iterate over each character (digit) in the array and convert it back to a number using parseInt().
+// The resulting array contains each digit of the original number as separate elements.
