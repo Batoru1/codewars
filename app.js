@@ -130,20 +130,22 @@ function digitalRoot(n) {
       .toString()
       .split('')
       .map(n => parseInt(n));
-    return seperateNumbers;
-    function sumOfArr(seperateNumbers) {
-      let sum = 0;
-      for (let i = 0; i < seperateNumbers.length; i++) {
-        sum += parseInt(seperateNumbers[i]);
-        return sumOfArr;
-        console.log(sumOfArr);
-      }
-    }
+    // return seperateNumbers;
+    const [x, y, ...rest] = seperateNumbers;
+    console.log(x, y, rest);
+    // function sumOfArr(seperateNumbers) {
+    //   let sum = 0;
+    //   for (let i = 0; i < seperateNumbers.length; i++) {
+    //     sum += seperateNumbers[i];
+    //     return sumOfArr;
+    //     console.log(sumOfArr);
+    //   }
+    // }
   } else {
     return n;
   }
 }
-console.log(digitalRoot(12));
+console.log(digitalRoot(120));
 
 //The toString() method converts the number to a string.
 // The split('') method splits the string into an array of individual characters.
