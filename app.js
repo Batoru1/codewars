@@ -91,63 +91,13 @@
 // }
 // console.log(toCamelCase('fsf-Lsdfsf-fdsdfsa-gfds'));
 
-//4 Your task is to sort a given string. Each word in the string will contain a single number. This number is the position the word should have in the result.
+///////////////////Edabit//////////////////////
 
-// Note: Numbers can be from 1 to 9. So 1 will be the first word (not 0).
-
-// If the input string is empty, return an empty string. The words in the input String will only contain valid consecutive numbers.
-
-// Examples
-// "is2 Thi1s T4est 3a"  -->  "Thi1s is2 3a T4est"
-// "4of Fo1r pe6ople g3ood th5e the2"  -->  "Fo1r the2 g3ood 4of th5e pe6ople"
-// ""  -->  ""
-
-// const string1 = 'is2 Thi1s T4est 3a';
-// const string2 = '4of Fo1r pe6ople g3ood th5e the2';
-
-// function myArray(string) {
-//   // return string.split(' ');
-//   const arr = string.split(' ');
-//   for (let i = 0; i < arr.length; i++) {}
+// function calcAge(age) {
+//   return age * 365;
 // }
-
-// console.log(myArray(string1));
-//no finito//
-
-//5 Digital root is the recursive sum of all the digits in a number.
-
-// Given n, take the sum of the digits of n. If that value has more than one digit, continue reducing in this way until a single-digit number is produced. The input will be a non-negative integer.
-
-// Examples
-//     16  -->  1 + 6 = 7
-//    942  -->  9 + 4 + 2 = 15  -->  1 + 5 = 6
-// 132189  -->  1 + 3 + 2 + 1 + 8 + 9 = 24  -->  2 + 4 = 6
-// 493193  -->  4 + 9 + 3 + 1 + 9 + 3 = 29  -->  2 + 9 = 11  -->  1 + 1 = 2
-
-function digitalRoot(n) {
-  if (n > 9) {
-    const seperateNumbers = n
-      .toString()
-      .split('')
-      .map(n => parseInt(n));
-    // return seperateNumbers;
-    const [x, y, ...rest] = seperateNumbers;
-    console.log(x, y, rest);
-    // function sumOfArr(seperateNumbers) {
-    //   let sum = 0;
-    //   for (let i = 0; i < seperateNumbers.length; i++) {
-    //     sum += seperateNumbers[i];
-    //     return sumOfArr;
-    //     console.log(sumOfArr);
-    //   }
-    // }
-  } else {
-    return n;
-  }
-}
-console.log(digitalRoot(120));
-
-//The toString() method converts the number to a string.
-// The split('') method splits the string into an array of individual characters.
-// The map() method is used to iterate over each character (digit) in the array and convert it back to a number using parseInt().
-// The resulting array contains each digit of the original number as separate elements.
+// const calcAge = function (age) {
+//   return age * 365;
+// };
+const calcAge = age => age * 365;
+console.log(calcAge(10));
