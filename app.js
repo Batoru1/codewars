@@ -93,11 +93,77 @@
 
 ///////////////////Edabit//////////////////////
 
-// function calcAge(age) {
+//1 function calcAge(age) {
 //   return age * 365;
 // }
 // const calcAge = function (age) {
 //   return age * 365;
 // };
 const calcAge = age => age * 365;
-console.log(calcAge(10));
+// console.log(calcAge(10));
+
+//2Create a function that takes two numbers as arguments and returns their sum.
+
+// function addition(a, b) {
+//   return a + b;
+// }
+
+// const addition = function (a, b) {
+//   return a + b;
+// };
+
+const addition = (a, b) => a + b;
+// console.log(addition(5, 6));
+
+//3Write a function that takes an integer minutes and converts it to seconds.
+
+// function convert(minutes) {
+//   const seconds = minutes * 60;
+//   return seconds;
+// }
+
+// const convert = function (minutes) {
+//   const seconds = minutes * 60;
+//   return seconds;
+// };
+
+const convert = minutes => {
+  const seconds = minutes * 60;
+  return seconds;
+};
+// console.log(convert(10));
+
+//4 There is a single operator in JavaScript, capable of providing the remainder of a division operation. Two numbers are passed as parameters. The first parameter divided by the second parameter will have a remainder, possibly zero. Return that value.
+
+// function remainder(x, y) {
+//   return x % y;
+// }
+
+// const remainder = function (x, y) {
+//   return x % y;
+// };
+
+const remainder = (x, y) => x % y;
+
+// console.log(remainder(10, 4));
+
+//5 Create a function that takes voltage and current and returns the calculated power.
+
+const circuitPower = (voltage, current) => voltage * current;
+
+//6Check if One Array can be Nested in Another
+// Create a function that returns true if the first array can be nested inside the second and false otherwise.
+
+// arr1 can be nested inside arr2 if:
+
+// arr1's min is greater than arr2's min.
+// arr1's max is less than arr2's max.
+
+// Examples
+// canNest([1, 2, 3, 4], [0, 6]) ➞ true
+
+// canNest([3, 1], [4, 0]) ➞ true
+
+// canNest([9, 9, 8], [8, 9]) ➞ false
+
+// canNest([1, 2, 3, 4], [2, 3]) ➞ false
